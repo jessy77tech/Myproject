@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+  <style> 
+ 
+
+/* Light mode styles */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  width:100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links li a:hover {
+  color: #f4a261;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+  /* Main page content */
+.main-page {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Slide-in page container */
+.slide-page {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #121212; /* Adjust for light or dark mode */
+  color: white;
+  z-index: 1000;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+/* Active state for the slide page */
+.slide-page.active {
+  transform: translateX(100%);
+  left: 0;
+}
+
+/* Content inside the sliding page */
+.slide-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+  
+  /* Main page styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-page {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Slide page container */
+.slide-page {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100%;
+  background-color: #121212; /* Dark background */
+  color: white;
+  z-index: 1000;
+  overflow: hidden;
+  transition: left 0.5s ease; /* Smooth slide-in effect */
+}
+
+/* Slide content */
+.slide-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+.about {
+  width : 30%;
+  text-align:center;
+  height: 300px;
+  background-color: rgb(243, 182, 243);
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px maroon;
+  margin-left: 30%;
+  padding-top: 20px;
+  font-size: 1.5em;
+  font-family: Helvetica, Arial, sans-serif;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+@keyframes example {
+  0%   {background-color:rgb(231, 115, 115); left:0px; top:0px;}
+  25%  {background-color:rgb(241, 241, 73); left:200px; top:0px;}
+  50%  {background-color:rgb(80, 80, 211); left:200px; top:200px;}
+  75%  {background-color:rgb(81, 192, 81); left:0px; top:200px;}
+  100% {background-color:rgb(230, 104, 104); left:0px; top:0px;}
+}
+.about2 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px maroon;
+  height: 100px;
+  width: 300px;
+}
+#me {
+text-align: center;
+}
+h1 {
+  text-align: center;
+}
+</style></head>
+<body>
+
+  <div class="theme-switch">
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+  </label>
+  <p>Dark Mode</p>
+</div>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">My Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="game.htm.html">Projects</a></li>
+        <li><a href="#art">Art</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  
+  <script src="script.js"></script>
+  <script>const toggleSwitch = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  body.classList.add(savedTheme);
+  toggleSwitch.checked = savedTheme === 'dark-mode';
+}
+
+// Add event listener to toggle theme
+toggleSwitch.addEventListener('change', () => {
+  if (toggleSwitch.checked) {
+    body.classList.add('dark-mode');
+    body.classList.remove('light-mode');
+    localStorage.setItem('theme', 'dark-mode');
+  } else {
+    body.classList.add('light-mode');
+    body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light-mode');
+  }
+});</script>
+<h1>Hi, I'm</h1>
+
+
+<div class="about">
+<div>Jessy</div><br>
+<img src="work.jpg" alt="working" width="200" height="200"><br>
+<div class="about about2">Front-End Developer</div>
+
+<h1>Click Me Game</h1>
+  <p> When you are the first to find the red color, you WIN $20</p>
+  <p>Let go...</p>
+  <a href="game.htm.html">Play</a>
+</div>
+</body>
+</html>
