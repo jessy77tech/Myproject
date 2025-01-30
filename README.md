@@ -47,7 +47,8 @@
 ## 📫 Let's Connect  
 
 🌍 [**Portfolio Website**](#) *(Coming Soon!)*  
-💼 [**LinkedIn**](#) *(Add your link here!)*  
+💼 [**LinkedIn**](#) *(  https://www.linkedin.com/in/jessy-kalanga-901044247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
 📧 **jessy.kalanga@gmail.com**  
 
 ---
